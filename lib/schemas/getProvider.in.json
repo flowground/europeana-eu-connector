@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "wskey": {
+            "required": false,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

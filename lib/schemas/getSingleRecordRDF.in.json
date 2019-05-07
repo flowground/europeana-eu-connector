@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "collectionId": {
+            "required": true,
+            "type": "string"
+        },
+        "recordId": {
+            "required": true,
+            "type": "string"
+        },
+        "wskey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

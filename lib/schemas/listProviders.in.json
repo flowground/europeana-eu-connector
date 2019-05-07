@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "wskey": {
+            "required": false,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        },
+        "countryCode": {
+            "required": false,
+            "type": "string"
+        },
+        "offset": {
+            "required": false,
+            "type": "string"
+        },
+        "pagesize": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

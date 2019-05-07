@@ -1,0 +1,242 @@
+{
+    "title": "Europeana",
+    "description": "This Swagger API console provides an overview of an interface to the Europeana REST API. You can build and test anything from the simplest search to a complex query using facetList such as dates, geotags and permissions. For more help and information, head to our comprehensive <a href=\"http://labs.europeana.eu/api/\">online documentation</a>.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/europeana.eu/2.3.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://www.europeana.eu/api",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getDataset": {
+            "main": "./lib/actions/getDataset.js",
+            "title": "get information about a specific dataset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDataset.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listDatasets": {
+            "main": "./lib/actions/listDatasets.js",
+            "title": "get the list of Europeana datasets",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listDatasets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "openSearch": {
+            "main": "./lib/actions/openSearch.js",
+            "title": "basic search function following the OpenSearch specification",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/openSearch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProvider": {
+            "main": "./lib/actions/getProvider.js",
+            "title": "get information about a specific Europeana provider",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProvider.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listProviderDatasets": {
+            "main": "./lib/actions/listProviderDatasets.js",
+            "title": "get the list of datasets provided by a specific provider",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listProviderDatasets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listProviders": {
+            "main": "./lib/actions/listProviders.js",
+            "title": "get the list of Europeana data providers",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listProviders.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSingleRecordJson": {
+            "main": "./lib/actions/getSingleRecordJson.js",
+            "title": "get a single record in JSON format",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSingleRecordJson.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSingleRecordJsonLD": {
+            "main": "./lib/actions/getSingleRecordJsonLD.js",
+            "title": "get single record in JSON LD format",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSingleRecordJsonLD.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSingleRecordRDF": {
+            "main": "./lib/actions/getSingleRecordRDF.js",
+            "title": "get single record in RDF format)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSingleRecordRDF.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "searchRecords": {
+            "main": "./lib/actions/searchRecords.js",
+            "title": "search for records",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/searchRecords.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "fieldTrip": {
+            "main": "./lib/actions/fieldTrip.js",
+            "title": "Google Fieldtrip formatted RSS of selected collections",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/fieldTrip.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "suggestions": {
+            "main": "./lib/actions/suggestions.js",
+            "title": "get autocompletion recommendations for search queries",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/suggestions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "translateQueryUsingGET": {
+            "main": "./lib/actions/translateQueryUsingGET.js",
+            "title": "translate a term to different languages",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/translateQueryUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

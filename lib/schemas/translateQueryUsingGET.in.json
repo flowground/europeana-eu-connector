@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "term": {
+            "required": true,
+            "type": "string"
+        },
+        "languageCodes": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "wskey": {
+            "required": true,
+            "type": "string"
+        },
+        "profile": {
+            "required": false,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

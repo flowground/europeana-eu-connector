@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "query": {
+            "required": true,
+            "type": "string"
+        },
+        "rows": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "phrases": {
+            "required": false,
+            "type": "boolean"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

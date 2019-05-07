@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "searchTerms": {
+            "required": true,
+            "type": "string"
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

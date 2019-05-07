@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "wskey": {
+            "required": true,
+            "type": "string"
+        },
+        "query": {
+            "required": false,
+            "type": "string"
+        },
+        "qf": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "reusability": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "profile": {
+            "required": false,
+            "type": "string"
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "rows": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "facet": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "sort": {
+            "required": false,
+            "type": "string"
+        },
+        "colourpalette": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "thumbnail": {
+            "required": false,
+            "type": "boolean"
+        },
+        "media": {
+            "required": false,
+            "type": "boolean"
+        },
+        "text_fulltext": {
+            "required": false,
+            "type": "boolean"
+        },
+        "landingpage": {
+            "required": false,
+            "type": "boolean"
+        },
+        "cursor": {
+            "required": false,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

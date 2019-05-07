@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "collectionId": {
+            "required": true,
+            "type": "string"
+        },
+        "recordId": {
+            "required": true,
+            "type": "string"
+        },
+        "profile": {
+            "required": false,
+            "type": "string"
+        },
+        "wskey": {
+            "required": true,
+            "type": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string"
+        },
+        "hierarchytimeout": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}
